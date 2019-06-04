@@ -46,7 +46,7 @@ small_but_expensive function will show up in the timer for just_that and not
 all_this.
 """
 
-import StringIO
+import io
 import time
 
 
@@ -193,7 +193,7 @@ class StopWatch(object):
     Returns:
       A string describing the stopwatch.
     """
-    output = StringIO.StringIO()
+    output = io.StringIO()
     results = self.results(verbose=verbose)
     maxlength = max([len(result[0]) for result in results])
     for result in results:
